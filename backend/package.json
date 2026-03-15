@@ -19,9 +19,9 @@
     "test:integration:db": "node test/scripts/setup-integration-db.js",
     "test:integration": "jest --config test/jest.integration.config.js --runInBand",
     "verify:backend": "npm run build && npm test -- --config test/jest.config.js --runInBand && npm run test:integration:db && npm run test:integration",
-    "prisma:generate": "prisma generate --schema ../prisma/schema.prisma",
-    "prisma:migrate": "prisma migrate dev --schema ../prisma/schema.prisma",
-    "prisma:studio": "prisma studio --schema ../prisma/schema.prisma"
+    "prisma:generate": "prisma generate --schema prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema prisma/schema.prisma",
+    "prisma:studio": "prisma studio --schema prisma/schema.prisma"
   },
   "dependencies": {
     "@as-integrations/express5": "^1.1.2",
@@ -32,8 +32,8 @@
     "@nestjs/core": "^11.1.6",
     "@nestjs/graphql": "^13.0.4",
     "@nestjs/platform-express": "^11.1.6",
-    "@prisma/client": "^6.9.0",
-    "prisma": "^6.9.0",
+    "@prisma/client": "^6.19.2",
+    "prisma": "^6.19.2",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
     "graphql": "^16.11.0",

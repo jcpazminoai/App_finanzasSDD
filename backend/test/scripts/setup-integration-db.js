@@ -1,4 +1,4 @@
-const { execFileSync, execSync } = require('child_process');
+﻿const { execFileSync, execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -72,8 +72,9 @@ try {
   }
 }
 
-execSync('npx prisma migrate deploy --schema ../../prisma/schema.prisma', {
+execSync('npx prisma migrate deploy --schema prisma/schema.prisma', {
   cwd: backendRoot,
   stdio: 'inherit',
   env
 });
+
