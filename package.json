@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "railway:backend:build": "cd app_finanzas/backend && npm install && npm run build",
+    "railway:backend:start": "cd app_finanzas/backend && npm run start:prod"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.2"
+  }
+}

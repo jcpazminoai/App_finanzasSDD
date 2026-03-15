@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Categorías de Finanzas</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 lg:px-40 py-4 bg-white dark:bg-background-dark/50 sticky top-0 z-10 backdrop-blur-md">
+<div class="flex items-center gap-4 text-primary">
+<div class="flex items-center justify-center bg-primary/10 rounded-lg p-2">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance_wallet</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Categorías</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-primary/5 border border-primary/10 overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<div class="text-primary/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 text-slate-900 dark:text-slate-100 placeholder:text-primary/40 px-3 text-sm" placeholder="Buscar categoría..." value=""/>
+</div>
+</label>
+<button class="flex items-center justify-center rounded-lg h-10 bg-primary text-white gap-2 text-sm font-bold px-4 hover:bg-primary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+<span class="hidden sm:inline">Nueva Categoría</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/10" data-alt="Profile picture of the user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwjuDIyLtwc2qUxJ_HA1v0jcfe91eHCrXxh90d0m2F81vEjldR_tFujsICb2-b2XrASXrNFAMpWOI4NnJQGjyFrC8_O91b3Ez1CtofbVgwmUqavZFMUZvb2LRtZBsckj2UQ9ZTRc0kHrEYtMqHTsmqF3rAKCIwGneW0HnEdC8ZtTFpAjoOkwb_aS_IVxm6kZ3MwkFkS9s9yQOhuQP0-PSD4wEgnHc_pK4diPb2RYbckb6ZxyaMTmCiljkgX97h7mN6oRVfpZHmE58");'></div>
+</div>
+</header>
+<main class="px-6 md:px-20 lg:px-40 flex flex-1 justify-center py-6">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Tabs Section -->
+<div class="mb-6">
+<div class="flex border-b border-primary/10 px-2 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Globales</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-2 hover:text-primary transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Personalizadas</p>
+</a>
+</div>
+</div>
+<div class="flex items-center justify-between px-2 pb-4 pt-2">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">Mis Categorías</h3>
+<span class="text-xs font-medium text-primary/60 uppercase tracking-wider">8 categorías activas</span>
+</div>
+<!-- List of Categories -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/40 border border-primary/5 rounded-xl px-4 min-h-[72px] py-2 justify-between hover:border-primary/20 hover:shadow-sm transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">home</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Vivienda</p>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-normal">Gasto Fijo</span>
+<span class="size-1.5 rounded-full bg-blue-500"></span>
+<span class="text-blue-500 text-xs font-medium">Azul Real</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Último Mes</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$1,200.00</span>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/40 border border-primary/5 rounded-xl px-4 min-h-[72px] py-2 justify-between hover:border-primary/20 hover:shadow-sm transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Alimentación</p>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-normal">Gasto Variable</span>
+<span class="size-1.5 rounded-full bg-emerald-500"></span>
+<span class="text-emerald-500 text-xs font-medium">Verde Esmeralda</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Último Mes</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$450.20</span>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/40 border border-primary/5 rounded-xl px-4 min-h-[72px] py-2 justify-between hover:border-primary/20 hover:shadow-sm transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">directions_car</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Transporte</p>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-normal">Gasto Mixto</span>
+<span class="size-1.5 rounded-full bg-amber-500"></span>
+<span class="text-amber-500 text-xs font-medium">Ámbar</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Último Mes</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$180.00</span>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/40 border border-primary/5 rounded-xl px-4 min-h-[72px] py-2 justify-between hover:border-primary/20 hover:shadow-sm transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-rose-100 dark:bg-rose-900/30 text-rose-600 shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">movie</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Ocio y Entretenimiento</p>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-normal">Gasto Variable</span>
+<span class="size-1.5 rounded-full bg-rose-500"></span>
+<span class="text-rose-500 text-xs font-medium">Rosa Carmín</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Último Mes</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$95.00</span>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Item 5 (Custom/Personalized Style Hint) -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/40 border border-primary/5 rounded-xl px-4 min-h-[72px] py-2 justify-between hover:border-primary/20 hover:shadow-sm transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 shrink-0 size-12 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-slate-100 text-base font-semibold leading-normal">Educación</p>
+<div class="flex items-center gap-2">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-normal">Gasto Fijo</span>
+<span class="size-1.5 rounded-full bg-indigo-500"></span>
+<span class="text-indigo-500 text-xs font-medium">Indigo</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex flex-col items-end mr-4">
+<span class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Último Mes</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">$210.00</span>
+</div>
+<span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Summary/Insight Card -->
+<div class="mt-8 p-6 rounded-xl bg-primary text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md overflow-hidden relative">
+<div class="relative z-10">
+<h4 class="text-lg font-bold mb-1">Optimiza tus gastos</h4>
+<p class="text-white/80 text-sm max-w-md">Has creado 3 nuevas categorías este mes. Recuerda que mantener pocas categorías ayuda a un mejor análisis visual de tus finanzas.</p>
+</div>
+<button class="relative z-10 px-6 py-2.5 bg-white text-primary font-bold rounded-lg text-sm hover:bg-slate-50 transition-colors whitespace-nowrap">
+                        Ver Reporte Detallado
+                    </button>
+<!-- Abstract background circles -->
+<div class="absolute -right-10 -bottom-10 size-40 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute right-20 -top-10 size-24 bg-white/5 rounded-full blur-xl"></div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

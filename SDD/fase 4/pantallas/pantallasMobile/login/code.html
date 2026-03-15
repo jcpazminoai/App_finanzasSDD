@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0e4958",
+              "background-light": "#f6f8f8",
+              "background-dark": "#121d20",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Finanzas - Iniciar Sesión</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center p-4 justify-between shrink-0">
+<button class="text-primary flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">Finanzas</h2>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 pb-12 max-w-md mx-auto w-full">
+<!-- Logo/Icon Area -->
+<div class="mb-8 flex items-center justify-center bg-primary/10 w-20 h-20 rounded-2xl">
+<span class="material-symbols-outlined text-primary text-5xl">account_balance_wallet</span>
+</div>
+<!-- Title and Description -->
+<div class="text-center mb-10">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight mb-3">Bienvenido</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal">Ingresa tus credenciales para acceder a tu panel financiero</p>
+</div>
+<!-- Login Form -->
+<form class="w-full space-y-5">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold ml-1">Correo electrónico</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="form-input w-full pl-12 pr-4 h-14 rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-slate-400 transition-all" placeholder="nombre@ejemplo.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold ml-1">Contraseña</label>
+<div class="relative flex">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="form-input w-full pl-12 pr-12 h-14 rounded-xl border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-slate-400 transition-all" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end px-1">
+<a class="text-primary text-sm font-semibold hover:underline" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-primary text-white font-bold h-16 rounded-xl shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 text-lg mt-4" type="submit">
+<span>Iniciar Sesión</span>
+<span class="material-symbols-outlined">login</span>
+</button>
+</form>
+<!-- Social/Alternative Login -->
+<div class="w-full mt-10">
+<div class="relative flex items-center gap-4 mb-8">
+<div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+<span class="text-slate-400 text-xs font-medium uppercase tracking-widest">o continuar con</span>
+<div class="flex-grow border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center h-14 border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="Google" class="w-6 h-6 mr-2" data-alt="Icono colorido de Google G" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXXScb3mmCzHxxb3yZHId4MKyBBMGcjGiFdIEV4VH4yixmrjSQpM7C9MJjmEqtp30cVbff-mAhOtHUSG-PCCR2r8EnWuYy8NV6PR_Kx6kD5r2jyV2bRv6fHj4y0twyfWUyZTQT0gxwx5y-gCyHKdRMaczuVJEIWaesVYPt1ErutS6SDSz1BFp9ozfUZcNG-A_T7yiOSIBeticDqijZRJ538mOhq6pXZYPCXA6Nt7zGhfpoh71smItt5kCobWWzRq88vhIv19Vq4xs"/>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Google</span>
+</button>
+<button class="flex items-center justify-center h-14 border border-slate-200 dark:border-slate-800 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="Apple" class="w-6 h-6 mr-2 dark:invert" data-alt="Icono negro de la manzana de Apple" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDssvtAmFnG-Fq2_s_MCje6OJcAKn1L9pNVLdW9BX5FPrmtQ5rbzGNvRWs8bhXvzcADERK3e7h8nHtNgygC2gIkjGNdtfAj1mbIcI0BQJVnWqnQyoFOZpwxUu3RdDOndtfK0wcCNjN0bofxyx50EyEcfxF_BGcxpCNpzRSY6Mxf828Xlbn0UUzXQspnze-MAOJV3jXQ05DJIhojEDriZeTxxvewkPVz1B7SAV2a3in-royxa277QBL6i1px5X15Jl9n1hjcFklEs9Q"/>
+<span class="font-semibold text-slate-700 dark:text-slate-300">Apple</span>
+</button>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="mt-auto pt-10 text-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                    ¿No tienes una cuenta? 
+                    <a class="text-primary font-bold hover:underline" href="#">Regístrate gratis</a>
+</p>
+</div>
+</main>
+</div>
+</body></html>

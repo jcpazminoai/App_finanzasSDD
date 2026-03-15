@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mis Cuentas - Finanzas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 sticky top-0 z-10 border-b border-primary/10">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold leading-tight flex-1 text-center">Mis Cuentas</h1>
+<div class="flex size-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full size-10 hover:bg-primary/10">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<!-- Balance General Card -->
+<div class="p-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-primary text-white shadow-lg shadow-primary/20">
+<p class="text-white/80 text-sm font-medium">Patrimonio Total</p>
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold tracking-tight">$24,850.00</p>
+<span class="text-xs font-medium bg-white/20 px-2 py-0.5 rounded-full">+3.2% este mes</span>
+</div>
+<div class="mt-4 flex gap-4 border-t border-white/10 pt-4">
+<div class="flex-1">
+<p class="text-white/60 text-[10px] uppercase tracking-wider">Ingresos</p>
+<p class="font-semibold">$8,400</p>
+</div>
+<div class="flex-1">
+<p class="text-white/60 text-[10px] uppercase tracking-wider">Egresos</p>
+<p class="font-semibold">$3,250</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Account Type Filters -->
+<div class="flex gap-2 px-4 overflow-x-auto no-scrollbar pb-2">
+<button class="whitespace-nowrap rounded-full bg-primary px-4 py-2 text-sm font-medium text-white">Todas</button>
+<button class="whitespace-nowrap rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">Ahorros</button>
+<button class="whitespace-nowrap rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">Inversiones</button>
+<button class="whitespace-nowrap rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">Tarjetas</button>
+</div>
+<!-- Account List -->
+<section class="mt-4">
+<div class="flex items-center justify-between px-4 mb-2">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500">Cuentas Activas</h3>
+<button class="text-primary text-sm font-semibold">Ver todas</button>
+</div>
+<div class="flex flex-col gap-1">
+<!-- Account Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 px-4 py-4 border-y border-primary/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-semibold">Cuenta Corriente</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold">$12,450.00</p>
+</div>
+<div class="flex justify-between items-center mt-1">
+<p class="text-slate-500 text-xs">Banco Galicia • **** 4592</p>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-green-100 text-green-700 uppercase">Principal</span>
+</div>
+</div>
+</div>
+<!-- Account Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 px-4 py-4 border-y border-primary/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-semibold">Caja de Ahorros</p>
+<p class="text-slate-900 dark:text-slate-100 font-bold">$5,200.00</p>
+</div>
+<div class="flex justify-between items-center mt-1">
+<p class="text-slate-500 text-xs">Mercado Pago • CVU</p>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-700 uppercase">Ahorro</span>
+</div>
+</div>
+</div>
+<!-- Account Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 px-4 py-4 border-y border-primary/5">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-slate-100 font-semibold">Visa Platinum</p>
+<p class="text-red-500 dark:text-red-400 font-bold">-$1,250.00</p>
+</div>
+<div class="flex justify-between items-center mt-1">
+<p class="text-slate-500 text-xs">Santander • **** 8831</p>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 uppercase">Crédito</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile Adapted Detail Table -->
+<section class="mt-8 px-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">Últimos Movimientos</h3>
+<div class="overflow-hidden rounded-xl border border-primary/10 bg-white dark:bg-slate-800/50">
+<div class="grid grid-cols-1 divide-y divide-primary/5">
+<!-- Transaction Row 1 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Starbucks Coffee</p>
+<p class="text-[10px] text-slate-500">12 May, 2024 • 09:41</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">-$4.50</p>
+<p class="text-[10px] text-primary">Comida</p>
+</div>
+</div>
+<!-- Transaction Row 2 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Transferencia Recibida</p>
+<p class="text-[10px] text-slate-500">11 May, 2024 • 15:20</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-green-600">+$1,200.00</p>
+<p class="text-[10px] text-primary">Salario</p>
+</div>
+</div>
+<!-- Transaction Row 3 -->
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">directions_car</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Uber Trip</p>
+<p class="text-[10px] text-slate-500">10 May, 2024 • 20:15</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">-$12.80</p>
+<p class="text-[10px] text-primary">Transporte</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 text-sm font-semibold text-primary bg-primary/5 hover:bg-primary/10 border-t border-primary/10">
+                        Ver historial completo
+                    </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-primary/10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-4 pb-6 pt-2 z-20">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-medium">Resumen</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Cuentas</span>
+</a>
+<div class="relative -top-8">
+<button class="size-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Pagos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

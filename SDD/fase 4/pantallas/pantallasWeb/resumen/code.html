@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Resumen Mensual - Finanzas</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 lg:px-40 py-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Finanzas</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="Retrato de perfil de usuario profesional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQogv82BBX__QgMkBlRCOJ4d6eUV8R49qmLdnRc1SvV9gF-t5Zpmw_wpZutW062ynHGqAtvk4ah8KcUgDrCZLWBFOHyoTtwC0kUKcmwy5wfngvmvkBbJsnL0Zi4M58hSXwNrzE-KHmSaprG__zU-E62-vH30mQIw_n3uLt-e6SC64NnWSyXPGrnMsPjG_LNOJw7qruBWFL3KHLslKcqPZaWQ-FnDSz-9dPrPz_B6LyvVG4bHrp2GmoYS2MCdqGBlxDulLjW0nq8Dc");'></div>
+</div>
+</header>
+<main class="flex-1 px-6 md:px-20 lg:px-40 py-8">
+<div class="max-w-4xl mx-auto flex flex-col gap-8">
+<!-- Title and Period -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<p class="text-sm font-semibold uppercase tracking-wider">Octubre 2023</p>
+</div>
+<h1 class="text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-slate-100">Resumen Mensual</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Hola, aquí tienes el cierre de tus cuentas este mes.</p>
+</div>
+<!-- Main Insight Card -->
+<div class="bg-primary text-white rounded-xl p-8 shadow-lg shadow-primary/20">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<p class="text-primary-foreground/80 text-lg font-medium">Balance Final</p>
+<h2 class="text-5xl font-bold mt-1">+1.254,00 €</h2>
+<p class="mt-4 flex items-center gap-2 text-emerald-300 font-medium">
+<span class="material-symbols-outlined">trending_up</span>
+<span>Tu balance es positivo. ¡Buen trabajo este mes!</span>
+</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-4 flex flex-col gap-1 border border-white/20">
+<span class="text-xs uppercase tracking-widest opacity-70">Ahorro respecto a Sept.</span>
+<span class="text-2xl font-bold">+12%</span>
+</div>
+</div>
+</div>
+<!-- Key Metrics Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg text-emerald-600">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 font-medium leading-normal">Ingresos del mes</p>
+</div>
+<p class="text-3xl font-bold leading-tight">3.500,00 €</p>
+<p class="text-emerald-600 dark:text-emerald-400 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">add_circle</span> 5% más que el mes pasado
+                            </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="p-2 bg-rose-100 dark:bg-rose-900/30 rounded-lg text-rose-600">
+<span class="material-symbols-outlined">arrow_upward</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 font-medium leading-normal">Gastos del mes</p>
+</div>
+<p class="text-3xl font-bold leading-tight">2.246,00 €</p>
+<p class="text-rose-600 dark:text-rose-400 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">remove_circle</span> 2% menos que el mes pasado
+                            </p>
+</div>
+</div>
+<!-- Category Chart Section -->
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
+<h3 class="text-xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+                            ¿En qué has gastado?
+                        </h3>
+<div class="flex flex-col md:flex-row items-center justify-around gap-12">
+<!-- Simple SVG Circular Chart -->
+<div class="relative size-48">
+<svg class="size-full -rotate-90 transform" viewbox="0 0 32 32">
+<circle class="fill-none stroke-primary/10" cx="16" cy="16" r="16" stroke-dasharray="100 100" stroke-width="32"></circle>
+<!-- Housing (45%) -->
+<circle class="fill-none stroke-primary" cx="16" cy="16" r="16" stroke-dasharray="45 100" stroke-width="32"></circle>
+<!-- Food (30%) -->
+<circle class="fill-none stroke-primary/60" cx="16" cy="16" r="16" stroke-dasharray="30 100" stroke-dashoffset="-45" stroke-width="32"></circle>
+<!-- Others (25%) -->
+<circle class="fill-none stroke-primary/30" cx="16" cy="16" r="16" stroke-dasharray="25 100" stroke-dashoffset="-75" stroke-width="32"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-xs uppercase opacity-60">Gastos</span>
+<span class="text-xl font-bold">100%</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-col gap-4 w-full md:w-64">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<span class="text-slate-700 dark:text-slate-300">Vivienda</span>
+</div>
+<span class="font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary/60"></div>
+<span class="text-slate-700 dark:text-slate-300">Alimentación</span>
+</div>
+<span class="font-bold">30%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary/30"></div>
+<span class="text-slate-700 dark:text-slate-300">Ocio y otros</span>
+</div>
+<span class="font-bold">25%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Direct Advice Section -->
+<div class="bg-primary/5 rounded-xl p-6 border-l-4 border-primary">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
+<div>
+<h4 class="font-bold text-lg mb-1">Consejo para Noviembre</h4>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                                    Has reducido tus gastos en ocio un 15% respecto a septiembre. Si mantienes este ritmo, podrías completar tu fondo de emergencia 3 meses antes de lo previsto. 
+                                </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-3 mb-12">
+<button class="flex-1 bg-primary text-white py-3 px-6 rounded-lg font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                            Descargar Informe PDF
+                        </button>
+<button class="flex-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 py-3 px-6 rounded-lg font-bold hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">share</span>
+                            Compartir Resumen
+                        </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Simulated) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-around items-center md:hidden">
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">Inicio</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Movimientos</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Análisis</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Ajustes</span>
+</button>
+</nav>
+</div>
+</div>
+</body></html>

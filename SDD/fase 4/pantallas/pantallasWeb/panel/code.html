@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mis Finanzas - Panel Personal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(14, 73, 88, 0.1);
+            color: #0e4958;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-primary/10 bg-white dark:bg-background-dark flex flex-col justify-between p-4 fixed h-full">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="size-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-primary text-lg font-bold leading-none">Mis Finanzas</h1>
+<p class="text-primary/60 text-xs font-medium">Gestión Personal</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg active-nav" href="#">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+<span class="text-sm font-semibold">Inicio</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="text-sm font-medium">Transacciones</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-sm font-medium">Estadísticas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-medium">Presupuesto</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Configuración</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<div class="p-4 rounded-xl bg-primary/5 border border-primary/10">
+<p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Plan Pro</p>
+<p class="text-xs text-slate-500 mb-3">Obtén reportes detallados y soporte 24/7.</p>
+<button class="w-full py-2 bg-primary text-white text-xs font-bold rounded-lg hover:bg-primary/90 transition-all">Mejorar ahora</button>
+</div>
+<button class="flex items-center justify-center gap-2 px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-xl">logout</span>
+                    Cerrar sesión
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-8">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div>
+<h2 class="text-3xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Resumen Financiero</h2>
+<p class="text-slate-500 dark:text-slate-400">Hola de nuevo, aquí tienes el estado de tus cuentas hoy.</p>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-bold hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined">add_circle</span>
+                    Registrar transacción
+                </button>
+</header>
+<!-- Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">+5.2%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Saldo Total</p>
+<p class="text-2xl font-black text-slate-900 dark:text-slate-100">$12,450.00</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-100 dark:bg-emerald-500/10 rounded-lg text-emerald-600">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">+12%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Ingresos</p>
+<p class="text-2xl font-black text-slate-900 dark:text-slate-100">$4,200.00</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-rose-100 dark:bg-rose-500/10 rounded-lg text-rose-600">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<span class="text-rose-500 text-xs font-bold bg-rose-50 dark:bg-rose-500/10 px-2 py-1 rounded-full">-3%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Gastos</p>
+<p class="text-2xl font-black text-slate-900 dark:text-slate-100">$1,850.00</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-100 dark:bg-blue-500/10 rounded-lg text-blue-600">
+<span class="material-symbols-outlined">balance</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">+15%</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Balance Neto</p>
+<p class="text-2xl font-black text-slate-900 dark:text-slate-100">$2,350.00</p>
+</div>
+</div>
+<!-- Main Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Chart Area -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Evolución Semanal</h3>
+<select class="bg-background-light dark:bg-slate-700 border-none text-xs font-bold rounded-lg px-3 py-1 text-slate-600 dark:text-slate-300">
+<option>Últimos 7 días</option>
+<option>Último mes</option>
+</select>
+</div>
+<div class="h-64 w-full flex items-end justify-between gap-2 px-2">
+<!-- Simple Visual Chart using Tailwind -->
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-24 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Lun</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-32 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Mar</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary rounded-t-lg h-48 group-hover:bg-primary/90 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Mie</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-40 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Jue</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-28 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Vie</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-56 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Sab</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2 group">
+<div class="w-full bg-primary/20 rounded-t-lg h-36 group-hover:bg-primary/40 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">Dom</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Distribución de Gastos</h3>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="font-medium">Alimentación</span>
+<span class="font-bold">45%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="font-medium">Entretenimiento</span>
+<span class="font-bold">20%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-blue-500 h-full w-[20%]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="font-medium">Servicios</span>
+<span class="font-bold">35%</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-rose-500 h-full w-[35%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Transactions -->
+<div class="lg:col-span-1">
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/5 shadow-sm h-full">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Recientes</h3>
+<button class="text-primary text-xs font-bold hover:underline">Ver todo</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Transaction Item -->
+<div class="flex items-center gap-3 p-3 hover:bg-primary/5 rounded-xl transition-colors cursor-pointer group">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Supermercado</p>
+<p class="text-xs text-slate-500">Hoy, 10:30 AM</p>
+</div>
+<p class="text-sm font-black text-rose-500">-$85.00</p>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center gap-3 p-3 hover:bg-primary/5 rounded-xl transition-colors cursor-pointer group">
+<div class="size-10 rounded-full bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Depósito Nómina</p>
+<p class="text-xs text-slate-500">Ayer, 09:00 AM</p>
+</div>
+<p class="text-sm font-black text-emerald-500">+$2,100.00</p>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center gap-3 p-3 hover:bg-primary/5 rounded-xl transition-colors cursor-pointer group">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Cena Restaurante</p>
+<p class="text-xs text-slate-500">Ayer, 08:45 PM</p>
+</div>
+<p class="text-sm font-black text-rose-500">-$42.30</p>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center gap-3 p-3 hover:bg-primary/5 rounded-xl transition-colors cursor-pointer group">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Gasolina</p>
+<p class="text-xs text-slate-500">22 Oct, 11:20 AM</p>
+</div>
+<p class="text-sm font-black text-rose-500">-$60.00</p>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center gap-3 p-3 hover:bg-primary/5 rounded-xl transition-colors cursor-pointer group">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">subscriptions</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Suscripción Netflix</p>
+<p class="text-xs text-slate-500">20 Oct, 02:15 AM</p>
+</div>
+<p class="text-sm font-black text-rose-500">-$15.99</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

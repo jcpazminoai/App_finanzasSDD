@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0e4958",
+              "background-light": "#f6f8f8",
+              "background-dark": "#121d20",
+              "coral-debt": "#ff6b6b",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Finanzas - Cuentas</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 bg-primary text-white rounded flex items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight dark:text-slate-100">Finanzas</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col md:flex-row">
+<!-- Sidebar Menu (Desktop) -->
+<aside class="hidden md:flex w-64 flex-col gap-2 p-6 border-r border-primary/10">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-medium">Inicio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-white" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="font-medium">Cuentas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">pie_chart</span>
+<span class="font-medium">Presupuesto</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Ajustes</span>
+</a>
+</nav>
+</aside>
+<!-- Content Area -->
+<section class="flex-1 p-6 md:p-10 max-w-6xl mx-auto w-full">
+<!-- Header & Call to Action -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h1 class="text-3xl font-bold tracking-tight">Mis Cuentas</h1>
+<p class="text-slate-500 dark:text-slate-400">Gestiona tus activos y deudas en un solo lugar</p>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Nueva Cuenta</span>
+</button>
+</div>
+<!-- Liquidity Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-primary text-white shadow-xl">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium opacity-80">Liquidez Total</p>
+<span class="material-symbols-outlined opacity-80">account_balance</span>
+</div>
+<p class="text-3xl font-bold tracking-tight">$12,450.00</p>
+<div class="mt-2 flex items-center gap-1 text-xs bg-white/20 w-fit px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+2.4% este mes</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-white dark:bg-background-dark border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500">Activos</p>
+<span class="material-symbols-outlined text-green-600">savings</span>
+</div>
+<p class="text-3xl font-bold tracking-tight">$15,200.00</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-white dark:bg-background-dark border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider font-bold">Deuda</p>
+<span class="material-symbols-outlined text-coral-debt">error</span>
+</div>
+<p class="text-3xl font-bold tracking-tight text-coral-debt">-$2,750.00</p>
+</div>
+</div>
+<!-- Accounts Cards -->
+<h2 class="text-xl font-bold mb-4">Resumen por Tipo</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+<!-- Ahorro -->
+<div class="flex flex-col justify-between p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="p-3 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-600">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">more_vert</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-500 text-xs font-semibold uppercase">Cuenta de Ahorros</p>
+<h3 class="text-lg font-bold">Banco Principal</h3>
+<p class="text-2xl font-bold mt-1 text-primary">$8,500.00</p>
+</div>
+</div>
+<!-- Efectivo -->
+<div class="flex flex-col justify-between p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary transition-colors cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="p-3 rounded-lg bg-green-50 dark:bg-green-900/30 text-green-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">more_vert</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-500 text-xs font-semibold uppercase">Efectivo</p>
+<h3 class="text-lg font-bold">Billetera Personal</h3>
+<p class="text-2xl font-bold mt-1 text-primary">$450.00</p>
+</div>
+</div>
+<!-- Tarjeta (Deuda) -->
+<div class="flex flex-col justify-between p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-coral-debt transition-colors cursor-pointer group">
+<div class="flex items-start justify-between">
+<div class="p-3 rounded-lg bg-red-50 dark:bg-red-900/30 text-coral-debt">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-coral-debt">more_vert</span>
+</div>
+<div class="mt-4">
+<p class="text-slate-500 text-xs font-semibold uppercase">Tarjeta de Crédito</p>
+<h3 class="text-lg font-bold">Visa Platinum</h3>
+<p class="text-2xl font-bold mt-1 text-coral-debt">-$2,750.00</p>
+<p class="text-[10px] text-coral-debt font-bold uppercase mt-1">DEUDA PENDIENTE</p>
+</div>
+</div>
+</div>
+<!-- Details Table -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl border border-primary/10 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-primary/5 flex items-center justify-between">
+<h2 class="text-lg font-bold">Detalle de Cuentas</h2>
+<div class="flex gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-9 pr-4 py-2 bg-background-light dark:bg-background-dark border-none rounded-lg text-sm focus:ring-2 focus:ring-primary w-48 md:w-64" placeholder="Buscar..." type="text"/>
+</div>
+<button class="p-2 bg-background-light dark:bg-background-dark rounded-lg text-slate-600 hover:text-primary">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background-light dark:bg-slate-900/50">
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500">Cuenta</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500">Tipo</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500">Última Actividad</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 text-right">Saldo</th>
+<th class="px-6 py-4 text-xs font-bold uppercase text-slate-500 text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">BP</div>
+<span class="font-medium">Banco Principal Ahorro</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Ahorros</td>
+<td class="px-6 py-4 text-sm text-slate-500">Hoy, 10:45 AM</td>
+<td class="px-6 py-4 text-right font-bold text-primary">$8,500.00</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-700 font-bold text-xs">EF</div>
+<span class="font-medium">Billetera Efectivo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Efectivo</td>
+<td class="px-6 py-4 text-sm text-slate-500">Ayer</td>
+<td class="px-6 py-4 text-right font-bold text-primary">$450.00</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-coral-debt font-bold text-xs">VP</div>
+<span class="font-medium">Visa Platinum</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Crédito</td>
+<td class="px-6 py-4 text-sm text-slate-500">hace 2 días</td>
+<td class="px-6 py-4 text-right font-bold text-coral-debt">-$2,750.00</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 font-bold text-xs">IN</div>
+<span class="font-medium">Inversiones Corto Plazo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Inversión</td>
+<td class="px-6 py-4 text-sm text-slate-500">hace 1 semana</td>
+<td class="px-6 py-4 text-right font-bold text-primary">$6,250.00</td>
+<td class="px-6 py-4 text-center">
+<button class="text-slate-400 hover:text-primary"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-background-light dark:bg-slate-900/30 flex items-center justify-between text-xs text-slate-500 font-medium">
+<p>Mostrando 4 de 4 cuentas</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-white dark:bg-slate-800 rounded border border-primary/10 disabled:opacity-50" disabled="">Anterior</button>
+<button class="px-3 py-1 bg-white dark:bg-slate-800 rounded border border-primary/10">Siguiente</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+</body></html>

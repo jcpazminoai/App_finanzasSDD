@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nueva Transacción - Finanzas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom select arrow based on primary color */
+        .custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230e4958'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-[480px] mx-auto min-h-screen flex flex-col bg-white dark:bg-slate-900 shadow-xl overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 py-4 border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<h2 class="text-primary font-bold text-lg leading-tight">Finanzas</h2>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-primary/5 hover:bg-primary/10 text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-6 py-8">
+<!-- Type Selector (Tabs) -->
+<div class="flex bg-primary/5 p-1 rounded-xl mb-10">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="hidden peer" name="tx-type" type="radio" value="expense"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold text-primary/60 peer-checked:bg-white peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                        Gasto
+                    </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="hidden peer" name="tx-type" type="radio" value="income"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold text-primary/60 peer-checked:bg-white peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                        Ingreso
+                    </div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="hidden peer" name="tx-type" type="radio" value="transfer"/>
+<div class="text-center py-2.5 rounded-lg text-sm font-semibold text-primary/60 peer-checked:bg-white peer-checked:text-primary peer-checked:shadow-sm transition-all">
+                        Transferencia
+                    </div>
+</label>
+</div>
+<!-- Dominant Amount Display -->
+<div class="text-center mb-10">
+<p class="text-xs font-bold uppercase tracking-widest text-primary/40 mb-2">Monto de la transacción</p>
+<div class="flex items-center justify-center gap-1">
+<span class="text-3xl font-medium text-primary/60">$</span>
+<input class="w-full max-w-[280px] bg-transparent border-none text-center text-6xl font-bold text-primary focus:ring-0 placeholder:text-primary/20 p-0" placeholder="0.00" type="text"/>
+</div>
+</div>
+<!-- Transaction Form -->
+<div class="space-y-6">
+<!-- Fecha -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-primary/70 ml-1">Fecha</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/50 text-xl">calendar_today</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-primary/5 border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-slate-900 dark:text-slate-100 font-medium" type="date" value="2023-10-27"/>
+</div>
+</div>
+<!-- Cuenta -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-primary/70 ml-1">Cuenta de origen</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/50 text-xl">credit_card</span>
+<select class="custom-select w-full pl-12 pr-4 py-3.5 bg-primary/5 border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-slate-900 dark:text-slate-100 font-medium">
+<option>Seleccionar cuenta</option>
+<option>Cuenta Corriente (Principal)</option>
+<option>Ahorros Personales</option>
+<option>Tarjeta de Crédito</option>
+<option>Efectivo</option>
+</select>
+</div>
+</div>
+<!-- Categoría -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-primary/70 ml-1">Categoría</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/50 text-xl">grid_view</span>
+<select class="custom-select w-full pl-12 pr-4 py-3.5 bg-primary/5 border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-slate-900 dark:text-slate-100 font-medium">
+<option>Seleccionar categoría</option>
+<option>Alimentación</option>
+<option>Transporte</option>
+<option>Entretenimiento</option>
+<option>Salud</option>
+<option>Vivienda</option>
+<option>Otros</option>
+</select>
+</div>
+</div>
+<!-- Nota -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-primary/70 ml-1">Nota / Descripción</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-4 text-primary/50 text-xl">notes</span>
+<textarea class="w-full pl-12 pr-4 py-3.5 bg-primary/5 border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-slate-900 dark:text-slate-100 font-medium placeholder:text-primary/30 resize-none" placeholder="Añade un detalle opcional..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action -->
+<div class="p-6 bg-white dark:bg-slate-900 border-t border-primary/5">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">check_circle</span>
+                Guardar transacción
+            </button>
+</div>
+</div>
+</body></html>

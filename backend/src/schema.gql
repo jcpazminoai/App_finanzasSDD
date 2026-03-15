@@ -1,0 +1,185 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AuthUserType {
+  id: String!
+  name: String!
+  email: String!
+  currency: String!
+  locale: String!
+}
+
+type AuthSessionType {
+  accessToken: String!
+  refreshToken: String!
+  user: AuthUserType!
+}
+
+type AccountType {
+  id: String!
+  userId: String!
+  name: String!
+  type: String!
+  currency: String!
+  balance: String!
+  isArchived: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type CategoryType {
+  id: String!
+  userId: String
+  name: String!
+  kind: String!
+  icon: String
+  isBuiltin: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type HealthStatusType {
+  status: String!
+  service: String!
+  database: String!
+}
+
+type MonthlySummaryCategoryTotalType {
+  categoryId: String!
+  categoryName: String!
+  kind: String!
+  total: String!
+}
+
+type MonthlySummaryType {
+  year: Int!
+  month: Int!
+  income: String!
+  expense: String!
+  balance: String!
+  byCategory: [MonthlySummaryCategoryTotalType!]!
+}
+
+type TransactionType {
+  id: String!
+  userId: String!
+  accountId: String!
+  categoryId: String!
+  txnDate: DateTime!
+  amount: String!
+  type: String!
+  description: String
+  notes: String
+  isRecurring: Boolean!
+  attachmentCount: Float!
+  transferAccountId: String
+  linkedTransactionId: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Query {
+  accounts: [AccountType!]!
+  currentUser: AuthUserType!
+  categories: [CategoryType!]!
+  health: HealthStatusType!
+  monthlySummary(input: MonthlySummaryInput!): MonthlySummaryType!
+  transactions(filters: TransactionsFilterInput): [TransactionType!]!
+}
+
+input MonthlySummaryInput {
+  year: Int!
+  month: Int!
+}
+
+input TransactionsFilterInput {
+  from: String
+  to: String
+  categoryId: String
+  accountId: String
+  type: String
+}
+
+type Mutation {
+  createAccount(input: CreateAccountInput!): AccountType!
+  updateAccount(input: UpdateAccountInput!): AccountType!
+  archiveAccount(accountId: String!): AccountType!
+  unarchiveAccount(accountId: String!): AccountType!
+  register(input: RegisterUserInput!): AuthSessionType!
+  login(input: LoginInput!): AuthSessionType!
+  createCategory(input: CreateCategoryInput!): CategoryType!
+  updateCategory(input: UpdateCategoryInput!): CategoryType!
+  deleteCategory(categoryId: String!): Boolean!
+  createTransaction(input: CreateTransactionInput!): TransactionType!
+  updateTransaction(input: UpdateTransactionInput!): TransactionType!
+  deleteTransaction(transactionId: String!): Boolean!
+}
+
+input CreateAccountInput {
+  name: String!
+  type: String!
+  currency: String!
+  initialBalance: Float
+}
+
+input UpdateAccountInput {
+  id: String!
+  name: String
+  type: String
+  currency: String
+}
+
+input RegisterUserInput {
+  name: String!
+  email: String!
+  password: String!
+  currency: String
+  locale: String
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input CreateCategoryInput {
+  name: String!
+  kind: String!
+  icon: String
+}
+
+input UpdateCategoryInput {
+  id: String!
+  name: String
+  kind: String
+  icon: String
+}
+
+input CreateTransactionInput {
+  accountId: String!
+  categoryId: String!
+  txnDate: String!
+  amount: Float!
+  type: String!
+  description: String
+  notes: String
+  transferAccountId: String
+}
+
+input UpdateTransactionInput {
+  id: String!
+  accountId: String
+  categoryId: String
+  txnDate: String
+  amount: Float
+  type: String
+  description: String
+  notes: String
+  transferAccountId: String
+}

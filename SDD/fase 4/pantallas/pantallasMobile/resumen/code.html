@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-4 flex items-center justify-between">
+<button class="text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Resumen Mensual</h1>
+<button class="text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</button>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Date Selector/Indicator -->
+<div class="px-4 pt-6 pb-2">
+<div class="flex items-center gap-2 text-primary font-semibold bg-primary/10 w-fit px-3 py-1 rounded-full text-sm">
+<span>Octubre 2023</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<!-- Hero Balance Section -->
+<section class="px-4 py-4">
+<div class="bg-primary rounded-xl p-6 text-white shadow-lg shadow-primary/20">
+<p class="text-white/80 text-sm font-medium">Balance Neto</p>
+<h2 class="text-3xl font-bold mt-1 tracking-tight">$1,650.00</h2>
+<div class="mt-4 flex items-center gap-2 bg-white/10 w-fit px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-green-400 text-sm">trending_up</span>
+<span class="text-xs font-medium">+20% vs mes anterior</span>
+</div>
+</div>
+</section>
+<!-- Metrics Grid (Vertical focused for mobile) -->
+<section class="px-4 py-2 space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400">arrow_downward</span>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Ingresos</p>
+</div>
+<p class="text-xl font-bold">$4,500.00</p>
+<p class="text-xs text-green-600 font-semibold mt-1">+12%</p>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-red-600 dark:text-red-400">arrow_upward</span>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-400">Gastos</p>
+</div>
+<p class="text-xl font-bold">$2,850.00</p>
+<p class="text-xs text-red-600 font-semibold mt-1">-5%</p>
+</div>
+</div>
+</section>
+<!-- Categories Visualization -->
+<section class="px-4 py-6">
+<div class="bg-white dark:bg-primary/5 p-5 rounded-xl border border-primary/10">
+<h3 class="text-base font-bold mb-6 flex items-center justify-between">
+                    Distribución de Gastos
+                    <span class="material-symbols-outlined text-slate-400">info</span>
+</h3>
+<!-- Simple Donut/Pie Chart Representation -->
+<div class="relative flex justify-center mb-8">
+<div class="w-32 h-32 rounded-full border-[12px] border-primary flex items-center justify-center relative">
+<div class="absolute inset-[-12px] rounded-full border-[12px] border-orange-400 border-l-transparent border-t-transparent border-b-transparent rotate-45"></div>
+<div class="absolute inset-[-12px] rounded-full border-[12px] border-emerald-400 border-r-transparent border-t-transparent border-b-transparent -rotate-12"></div>
+<div class="text-center">
+<span class="text-xs font-bold text-slate-500 uppercase">Total</span>
+<p class="text-sm font-bold">$2.8k</p>
+</div>
+</div>
+</div>
+<!-- Progress Bar Style for Quick Reading -->
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-sm">
+<span class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+                                Vivienda
+                            </span>
+<span class="font-bold">$1,200</span>
+</div>
+<div class="h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[42%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-sm">
+<span class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-orange-400"></span>
+                                Alimentación
+                            </span>
+<span class="font-bold">$650</span>
+</div>
+<div class="h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-orange-400 rounded-full w-[23%]"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-sm">
+<span class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                Entretenimiento
+                            </span>
+<span class="font-bold">$450</span>
+</div>
+<div class="h-2 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-400 rounded-full w-[16%]"></div>
+</div>
+</div>
+<button class="w-full text-center text-primary text-sm font-bold py-2 mt-2">
+                        Ver todo el desglose
+                    </button>
+</div>
+</div>
+</section>
+<!-- Insights / Tips -->
+<section class="px-4 pb-6">
+<div class="bg-orange-50 dark:bg-orange-950/20 p-4 rounded-xl border border-orange-200 dark:border-orange-900/30 flex gap-4">
+<div class="text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-orange-900 dark:text-orange-200">Consejo del mes</h4>
+<p class="text-sm text-orange-800 dark:text-orange-300/80 leading-snug mt-1">
+                        Has gastado un 15% menos en suscripciones este mes. ¡Sigue así para alcanzar tu meta de ahorro!
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-4 pb-6 pt-2 flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Inicio</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-[10px] font-medium">Cartera</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-bold">pie_chart</span>
+<span class="text-[10px] font-bold">Análisis</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</nav>
+</body></html>

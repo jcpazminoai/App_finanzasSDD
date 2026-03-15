@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0e4958",
+              "background-light": "#f6f8f8",
+              "background-dark": "#121d20",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Finanzas - Iniciar Sesión</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center items-center py-10 px-4">
+<div class="layout-content-container flex flex-col max-w-[480px] w-full bg-white dark:bg-slate-800/50 p-8 rounded-xl shadow-sm border border-primary/10">
+<div class="flex flex-col items-center gap-4 mb-8">
+<div class="flex items-center justify-center p-3 rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined !text-4xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div class="text-center">
+<h2 class="text-primary text-2xl font-bold leading-tight tracking-tight">Finanzas</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Gestión profesional de activos</p>
+</div>
+</div>
+<div class="mb-8 text-center">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight pb-2">Bienvenido de nuevo</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal">Ingresa tus credenciales para acceder a tu cuenta</p>
+</div>
+<form class="flex flex-col gap-5">
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold leading-normal">
+                            Correo electrónico
+                        </label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 !text-xl" data-icon="mail">mail</span>
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-primary h-12 pl-12 pr-4 placeholder:text-slate-400 text-base font-normal" placeholder="ejemplo@correo.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold leading-normal">
+                                Contraseña
+                            </label>
+<a class="text-primary text-xs font-medium hover:underline" href="#">¿Olvidaste tu contraseña?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 !text-xl" data-icon="lock">lock</span>
+<input class="form-input flex w-full rounded-lg text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-2 focus:ring-primary/20 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 focus:border-primary h-12 pl-12 pr-4 placeholder:text-slate-400 text-base font-normal" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center gap-2 py-1">
+<input class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" id="remember" type="checkbox"/>
+<label class="text-slate-600 dark:text-slate-400 text-sm" for="remember">Mantener sesión iniciada</label>
+</div>
+<button class="flex w-full items-center justify-center rounded-lg bg-primary px-4 h-12 text-white text-base font-bold tracking-wide transition-colors hover:bg-primary/90" type="submit">
+                        Iniciar Sesión
+                    </button>
+</form>
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="bg-white dark:bg-slate-800/50 px-3 text-slate-500">O continuar con</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<img alt="" class="w-5 h-5" data-alt="Icono oficial de Google color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC8V_Gecp0B0qPHGqJvyFtunFfyG_ykmYF0zAuPFDRbOH2wS0MXBzXoFSxCFs3jehezu4-Gd-rrpovDpGCSAhJhhi2_P1-8nnoX6yY3DSLChxKdbXftdfYb3AbD5A2WAE__POQTNxzQ9hBBMOSo9qZRbi4Lse_Hb0zx9jY8dc3US_JLKCijEh1ETi-xPZTpNrdSMPvFYKsu-K2ttAxzFWlub4BN_5v0QQATIjR6yo1DSMCoUlHX_PgZ0rIcxuHe80MG46GoS0bt8Y"/>
+                        Google
+                    </button>
+<button class="flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined !text-xl" data-icon="apple">ios</span>
+                        Apple
+                    </button>
+</div>
+<div class="mt-8 text-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                        ¿No tienes una cuenta? 
+                        <a class="text-primary font-bold hover:underline" href="#">Regístrate gratis</a>
+</p>
+</div>
+</div>
+</div>
+<footer class="py-6 px-10 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-xs">
+<p>© 2024 Finanzas App. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Términos de servicio</a>
+<a class="hover:text-primary transition-colors" href="#">Política de privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Seguridad</a>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

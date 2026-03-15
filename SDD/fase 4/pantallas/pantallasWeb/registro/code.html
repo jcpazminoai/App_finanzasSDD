@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro - Finanzas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0e4958",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#121d20",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between border-b border-solid border-primary/10 px-6 py-4 md:px-20 lg:px-40">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary text-white rounded-lg">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Finanzas</h2>
+</div>
+<button class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors hover:bg-primary/20">
+<span class="material-symbols-outlined">help</span>
+</button>
+</header>
+<main class="flex flex-1 items-center justify-center px-4 py-12 md:px-10">
+<div class="layout-content-container flex flex-col w-full max-w-[480px] gap-8">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-[-0.033em]">Crear Cuenta</h1>
+<p class="text-primary/70 dark:text-slate-400 text-base font-normal leading-normal">Únete a la plataforma para gestionar tus finanzas de forma inteligente.</p>
+</div>
+<form class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal">Nombre Completo</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary">person</span>
+<input class="form-input flex w-full rounded-lg border border-primary/20 bg-white dark:bg-slate-800 h-14 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-slate-400" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal">Correo Electrónico</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary">mail</span>
+<input class="form-input flex w-full rounded-lg border border-primary/20 bg-white dark:bg-slate-800 h-14 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-slate-400" placeholder="nombre@ejemplo.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal">Contraseña</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary">lock</span>
+<input class="form-input flex w-full rounded-lg border border-primary/20 bg-white dark:bg-slate-800 h-14 pl-12 pr-12 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 hover:text-primary" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 dark:text-slate-100 text-sm font-semibold leading-normal">Confirmar Contraseña</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary">lock_reset</span>
+<input class="form-input flex w-full rounded-lg border border-primary/20 bg-white dark:bg-slate-800 h-14 pl-12 pr-12 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all placeholder:text-slate-400" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg h-14 bg-primary text-white text-base font-bold leading-normal tracking-wide transition-opacity hover:opacity-90 active:scale-[0.98]" type="submit">
+                                Crear Cuenta
+                            </button>
+<div class="relative py-2 flex items-center justify-center">
+<div class="absolute inset-0 flex items-center px-2">
+<div class="w-full border-t border-primary/10"></div>
+</div>
+<span class="relative bg-background-light dark:bg-background-dark px-4 text-sm text-primary/60">o regístrate con</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 h-12 rounded-lg border border-primary/20 bg-white dark:bg-slate-800 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" type="button">
+<img alt="Google" class="w-5 h-5" data-alt="Logotipo de Google para registro social" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGJHgFXQtxejqMFFcGhOm6WzH45UB-RK46O_LHxaKDJazBTdFVJj6KcuGrEeg3ZeuuoTOlcjgE7OEJLUueTgRaAwAuT_1V39iOIG3LdcTTiuJudu5ANMF69DzZCDSkC424k-0F2yJkzWjkwUch_AeYah06eSQz4UyhnN2ZNblyUVOBZzltTxdstCxtbKbiZLgmPhqdFEMsRCBXMnzentxKuENVQzhjfIyi3wzEPwsPzKkwsmq2kcRbj3xpXMfA95ARnbcJ2LZTY9U"/>
+                                    Google
+                                </button>
+<button class="flex items-center justify-center gap-2 h-12 rounded-lg border border-primary/20 bg-white dark:bg-slate-800 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" type="button">
+<img alt="Facebook" class="w-5 h-5" data-alt="Logotipo de Facebook para registro social" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBybVm95XgQe4IxxTiqPLyd06CIKAZNjLvmfiaRjBWes9aXTxj7JhJi0PoXDEdwS9FDpL2BPxr8_R5a_PnpmeKbe6ocR7c81yJpFmtcTpLXP-emigEufQS7bA1_KKMldxpaR2u93TGJrF1S1LaKA3UMgN-I_h9pvh9B8xtYqZqIlE3XYc69Ph2cbomYCoT1YNB9QVmlR72s4Rj86EAI-jI0isRvN00DlwfuOdS5hARWm1Y5m9ijYApbqsD5WAi578ymWLUwCs_N8Sc"/>
+                                    Facebook
+                                </button>
+</div>
+</div>
+</form>
+<p class="text-center text-sm text-slate-600 dark:text-slate-400">
+                        ¿Ya tienes una cuenta? 
+                        <a class="text-primary font-bold hover:underline" href="#">Inicia Sesión</a>
+</p>
+<div class="mt-8 text-center text-xs text-slate-400">
+                        Al registrarte, aceptas nuestros 
+                        <a class="underline" href="#">Términos de Servicio</a> y 
+                        <a class="underline" href="#">Política de Privacidad</a>.
+                    </div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
